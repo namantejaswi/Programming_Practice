@@ -1,0 +1,42 @@
+<Title> Js objects</Title>
+<script type="text/javascript">
+
+    var player = {
+        name: "Aguero",
+        age: 30,
+        club: "Manchester City",
+        country: "Argentina",
+        position: "Striker",
+        goals: 200,         
+        assists: 100,
+
+        is_icon: function(){
+            document.write("total contribution:", this.goals + this.assists);
+            
+            if (this.goals > 100 && this.assists > 50){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+    };
+    document.write(player.name);
+    player.is_icon();
+
+    function constructor(name, age, club, country, position, goals, assists){
+        this.name = name;
+        this.age = age;
+        this.club = club;
+        this.country = country;
+        this.position = position;
+        this.goals = goals;
+        this.assists = assists;
+
+    var player_1 = new  constructor("Messi", 33, "Barcelona", "Argentina", "Striker", 500, 200);
+    document.write(player_1.name);
+    }
+
+
+
+</script>
